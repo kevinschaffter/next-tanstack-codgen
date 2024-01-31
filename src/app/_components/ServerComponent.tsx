@@ -6,5 +6,5 @@ export async function ServerComponent() {
     variables: { name: "from Static Server Component" },
   });
 
-  return <p>{hello}</p>;
+  return <p>{hello.hi}</p>;
 }

@@ -25,9 +25,15 @@ export type Scalars = {
   Float: { input: number; output: number; }
 };
 
+export type HelloResponse = {
+  __typename?: 'HelloResponse';
+  bye: Scalars['String']['output'];
+  hi: Scalars['String']['output'];
+};
+
 export type Query = {
   __typename?: 'Query';
-  hello: Scalars['String']['output'];
+  hello: HelloResponse;
 };
 
 
@@ -40,13 +46,16 @@ export type HelloQueryVariables = Exact<{
 }>;
 
 
-export type HelloQuery = { __typename?: 'Query', hello: string };
+export type HelloQuery = { __typename?: 'Query', hello: { __typename?: 'HelloResponse', bye: string, hi: string } };
 
 
 
 export const HelloDocument = `
     query Hello($name: String) {
-  hello(name: $name)
+  hello(name: $name) {
+    bye
+    hi
+  }
 }
     `;
 

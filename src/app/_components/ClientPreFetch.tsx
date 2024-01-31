@@ -7,6 +7,6 @@ export function ClientPreFetch() {
     name: "from Server Hydrated Client Component",
   });
 
-  if (!data?.hello) return;
-  return <p>{data.hello}</p>;
+  if (!data?.hello.hi) return;
+  return <p>{data.hello.bye}</p>;
 }

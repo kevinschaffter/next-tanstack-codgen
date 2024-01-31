@@ -7,5 +7,5 @@ export async function ServerComponentThree() {
     next: { revalidate: 0 },
   });
 
-  return <p>{hello}</p>;
+  return <p>{hello.hi}</p>;
 }

@@ -7,5 +7,5 @@ export async function DynamicServerComponent() {
     next: { revalidate: 0 },
   });
 
-  return <p>{hello}</p>;
+  return <p>{hello.hi}</p>;
 }
